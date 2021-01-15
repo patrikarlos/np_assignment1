@@ -3,6 +3,10 @@
 #include <stdlib.h>
 /* You will to add includes here */
 
+// Enable if you want debugging to be printed, see examble below.
+// Alternative, pass 
+#define DEBUG
+
 
 // Included to get the support library
 #include <calcLib.h>
@@ -21,8 +25,9 @@ int main(int argc, char *argv[]){
 
   /* Do magic */
   int port=atoi(Destport);
+#ifdef DEBUG 
   printf("Host %s, and port %d.\n",Desthost,port);
-
+#endif
 
   
 }
