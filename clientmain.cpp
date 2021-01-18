@@ -4,7 +4,7 @@
 /* You will to add includes here */
 
 // Enable if you want debugging to be printed, see examble below.
-// Alternative, pass 
+// Alternative, pass CFLAGS=-DDEBUG to make, make CFLAGS=-DDEBUG
 #define DEBUG
 
 

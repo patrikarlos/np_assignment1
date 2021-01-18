@@ -1,28 +1,27 @@
+CC_FLAGS= -Wall -I.
+LD_FLAGS= -Wall -L./ 
+
 
 all: libcalc test client server
 
-
-
 servermain.o: servermain.cpp
-	$(CXX) -Wall -c servermain.cpp -I.
+	$(CXX)  $(CC_FLAGS) $(CFLAGS) -c servermain.cpp 
 
 clientmain.o: clientmain.cpp
-	$(CXX) -Wall -c clientmain.cpp -I.
+	$(CXX) $(CC_FLAGS) $(CFLAGS) -c clientmain.cpp 
 
 main.o: main.cpp
-	$(CXX) -Wall -c main.cpp -I.
+	$(CXX) $(CC_FLAGS) $(CFLAGS) -c main.cpp 
 
 
 test: main.o calcLib.o
-	$(CXX) -L./ -Wall -o test main.o -lcalc
+	$(CXX) $(LD_FLAGS) -o test main.o -lcalc
 
 client: clientmain.o calcLib.o
-	$(CXX) -L./ -Wall -o client clientmain.o -lcalc
+	$(CXX) $(LD_FLAGS) -o client clientmain.o -lcalc
 
 server: servermain.o calcLib.o
-	$(CXX) -L./ -Wall -o server servermain.o -lcalc
-
-
+	$(CXX) $(LD_FLAGS) -o server servermain.o -lcalc
 
 
 calcLib.o: calcLib.c calcLib.h

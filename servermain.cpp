@@ -8,7 +8,7 @@
 #include <calcLib.h>
 
 // Enable if you want debugging to be printed, see examble below.
-// Alternative, pass argument during compilation '-DDEBUG'
+// Alternative, pass CFLAGS=-DDEBUG to make, make CFLAGS=-DDEBUG
 #define DEBUG
 
 
