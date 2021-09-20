@@ -86,7 +86,8 @@ int main(int argc, char *argv[]){
   int rv;
   char command[10];
 
-  
+  rv=0;
+   
   rv=sscanf(lineBuffer,"%s",command);
 
   printf("Command: |%s|\n",command);
