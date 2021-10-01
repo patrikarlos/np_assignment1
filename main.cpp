@@ -80,6 +80,10 @@ int main(int argc, char *argv[]){
   ssize_t nread=0;
   printf("Print a command: ");
   nread=getline(&lineBuffer,&lenBuffer,stdin);
+  if (nread == -1 ) {
+    printf("getline failed.\n");
+    exit(1);
+  }
   
   printf("got:> %s \n",lineBuffer);
 
@@ -88,7 +92,11 @@ int main(int argc, char *argv[]){
 
   
   rv=sscanf(lineBuffer,"%s",command);
-
+  if (rv == EOF ) {
+    printf("Sscanf failed.\n");
+    exit(1);
+  }
+  
   printf("Command: |%s|\n",command);
   
   if(command[0]=='f'){
