@@ -12,7 +12,7 @@
 
 
 /* array of char* that points to char arrays.  */ 
-char *arith[]={"add","div","mul","fsub","fadd","fdiv","fmul","fsub"};
+char *arith[]={"add","div","mul","sub","fadd","fdiv","fmul","fsub"};
 
 /* Used for random number */
 time_t myData_seedValue;
